@@ -5,7 +5,7 @@
 <p align="center">
  <img src="./emp.gif" alt="screenshot" >
   <h3 align="center">Employee Managment System</h3>
-n
+
   <p align="center">
     An awesome app to search your Mysql database and view it in your terminal
   </p>
