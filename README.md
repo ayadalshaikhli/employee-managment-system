@@ -3,17 +3,11 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://ayadalshaikhli.github.io/apiproject/">
-    <img src="/assets/img/pagescreencapture.png" alt="screenshot" >
-  </a>
-
-  <h3 align="center">Ball Finder</h3>
-
+ <img src="./emp.gif" alt="screenshot" >
+  <h3 align="center">Employee Managment System</h3>
+n
   <p align="center">
-    An awesome Website to search up coming events
-    <br />
-    <a href="https://ayadalshaikhli.github.io/apiproject/"><strong>Explore the Website »</strong></a>
-    <br />
+    An awesome app to search your Mysql database and view it in your terminal
   </p>
 </p>
 
@@ -27,8 +21,10 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
+    <li><a href="#installation">Installation</a></li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#usage">Credits</a></li>
+    <li><a href="#licens">Licens</a></li>
+    <li><a href="#credits">Credits</a></li>
   </ol>
 </details>
 
@@ -36,27 +32,33 @@
 
 ## About The Project
 
-Ballfinder is a web app that enables you to search for your favorite team's upcoming matches and find out Where, When, and Who your team is playing against as well as what league/cup they're playing in!
+Employee Managment app is used to add departments, roles, and employees for a businessm and store all the data inside Mysql database. User can view everything by using the terminal.
 
 ### Built With
 
 - [JavaScript](https://www.javascript.com/)
-- [HTML](https://html.com/)
-- [CSS](https://www.google.com/)
-- [Bulma](https://bulma.io/)
-- [MapBox](https://www.mapbox.com/)
-- [thesportApi](https://www.thesportsdb.com/)
+- [MySQL](https://dev.mysql.com/)
+- [Inquirer](https://www.npmjs.com/package/inquirer)
+- [NPM](https://www.npmjs.com/)
+- [Console.table](https://www.npmjs.com/package/console.table)
+
+## Installation
+
+Clone the application
+Run `npm install` to install the dependencies
+Run `npm install console.table`
 
 ## Usage
-The web page asks for your team name, then after submitting, will display all the upcoming events for you team with the date and time. It will also show the location of the stadium that the games are going to be played at.
 
+When type node index.js to run the app you are going to get many options to choose from you can view all employees all department and roles you can also add and update employee role
+
+## License
+
+This project is licensed under the terms of the [MIT](https://opensource.org/licenses/MIT) license.
 
 ## Credits
 
 1. https://www.w3schools.com/
 2. https://stackoverflow.com/
 3. https://github.com/
-4. https://www.thesportsdb.com/
-5. https://developer.mozilla.org/en-US/
-6. https://docs.mapbox.com/
-
+4. https://docs.npmjs.com/

@@ -22,7 +22,7 @@ const  runManagment = ()=>{
         message: 'What would you like to do?',
         choices: [
             "View All Employees",
-            "View All Employee By Department",
+            "View All Department",
             "View All Roles",
             "Add Employee",
             "Add Role",
@@ -180,22 +180,20 @@ const addDepartment = () =>{
     })
 };
 
-
-
-const  updateRole = () => {
+const updateRole = () => {
     connection.query("SELECT * FROM employees", function (err, res) {
         if(err) throw err;
         inquirer.prompt([
             {
-                name: "selectEmp",
+                name: "EmpRoleUpdated",
                 type: "list",
-                message: "Select employee's",
+                message: "Select employee First name to change role",
                 choices: function () {
-                    let choiceList = [];
+                    let employeeList = [];
                     for (var i = 0; i < res.length; i++) {
-                        choiceList.push(res[i].employees_name);
+                        employeeList.push(res[i].first_name);
                     }
-                    return choiceList;
+                    return employeeList;
                 }
             
             }
@@ -203,16 +201,18 @@ const  updateRole = () => {
         .then(function(answer) {
             inquirer.prompt([
                 {
-                    name: "selectedEmp",
+                    name: "EmpRoleDone",
                     type: "input",
                     message: "What is there employee ID for this new role?"
                 },
             ])
-            .then(function (updatedRole) {
-                connection.query("UPDATE employees SET role_id = ? WHERE employees_name = ?", [updatedRole.selectEmp, answer.updatedRole]);
-                console.log("Employee role update succesful.");
+            .then(function (updateEmpRole) {
+                connection.query("UPDATE employees SET role_id = ? WHERE first_name = ?", [updateEmpRole.EmpRoleDone, answer.EmpRoleUpdated]);
+                console.log("Employee Role Succesful.");
                 runManagment();
             })
         });
     })
 };
+
+
